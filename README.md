@@ -2,8 +2,8 @@ For those of us having a server at home with a basic home internet connection, t
 To quickly go around it you can setup an msmtp client to login to your personal email to send useful information from your running server.
 
 Requisites:
-sudo apt-get install msmtp-mta
-Open necessary ports in your firewall for outgoing emails.
+- sudo apt-get install msmtp-mta
+- Open necessary ports in your firewall for outgoing emails.
 
 Create or edit the config file for msmtp. msmtp will look for a file named .msmtprc in your home folder by default (.file means it is an occult file and wont be displayed with ls unless specified). This file must contain the instructions and your personal credentials so that msmtp can use them to send your ip address to your own email securely with tls. This file creates an "account" readable by msmtp to be used to send email. In this example the password is stored in plain text inside the configuration file so it must be in a secure account only accessible to the owner of the external email service used to send emails. TLS will be enabled.
 
